@@ -51,6 +51,11 @@ body {
 }
 
 /* HEADER */
+a {
+  text-decoration: none;
+}
+
+
 
 header {
 text-align: center;
@@ -248,26 +253,41 @@ main .fonctionnement .operation .operation__steps--icon {
     height: 75%;
     object-fit: cover;
   }
-  
+
+  #restaurants .card .card_content .content_name {
+  color: black;
+  line-height: 3px;
+  }
+
+  #restaurants .card .card_content .content_name .large {
+  font-weight: bold;
+    }
+
+  #restaurants .card .card_content .content_name .light {
+    font-size: 15px;
+      }
+
   .card_new {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     width: 100px;
-    height: 40px;
+    height: 25px;
     background: #99E2D0;
     color: #278870;
     display: flex;
     align-items: center;
+    font-weight: bolder;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
   }
   
   .card_content {
- 
     display: flex;
     justify-content: space-between;
     height: 50px;
     padding-left: 10px;
-    padding-top: 6px;
   }
   
   .content_heart {
