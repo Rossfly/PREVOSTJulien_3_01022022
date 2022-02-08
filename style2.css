@@ -55,11 +55,14 @@ body {
 header {
 text-align: center;
 }
-header #logo h1{
+
+header #logo h1 a{
   font-family: 'Shrikhand', cursive;
-  font-size: 35px;
-  color: #000;
+  font-size: 34px;
+  color: black;
+  font-weight: lighter;
 }
+ 
 header #logo a {
   text-decoration: none;
 }
@@ -71,35 +74,35 @@ header .lieu {
 }
 
 header .lieu p {
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
+  font-weight: bold;
 }
+
 header .fas {
   font-size: 20px;
   padding-right: 5px;
 }
 
-
-/* MENU HAUT */
-
-header .menuhaut{
+header .accueil{
 background-color: #f6f6f6;
 padding: 10px;
+padding-bottom: 50px;
 }
 
-header .menuhaut .reservation {
-  font-size: 30px;
+header .accueil .reservation {
+  font-size: 28px;
   font-weight: bold;
 }
 
-header .menuhaut .decouverte {
+header .accueil .decouverte {
   margin-bottom: 40px;
   font-size: 20px;
 }
 
-header .menuhaut .explorer {
+header .accueil .explorer {
   border: 0;
-  padding: 0.75rem 1.5rem;
+  padding: 17px 30px;
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 100px;
@@ -113,15 +116,13 @@ header .menuhaut .explorer {
 }
 
 
-
 /* MAIN */
 
-main .fonctionnement {
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;   /* A VRERIFIER  */
-  align-items: center;
+
+
+main h1 {
+padding-left: 15px;
+font-size: 25px;
 }
 
 .picture {
@@ -175,8 +176,8 @@ main .fonctionnement .operation li {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 25px;
-  margin: 15px 20px 15px 30px;
+  padding: 5px;
+  margin: 15px 20px 15px 5px;
   border-radius: 20px;
   box-shadow: 1px 2px 8px 2px #c4c4c4;
   background-color: #f5f5f5;
@@ -199,8 +200,8 @@ main .fonctionnement .operation .operation-number {
     background-color: #9356dc;
     color: white;
     border-radius: 50%;
-    padding: 5px 9px;
-    margin-left: -40px;
+    padding: 4px 9px;
+    margin-left: -20px;
   }
 
 main .fonctionnement .operation .operation__steps--icon {
@@ -209,10 +210,12 @@ main .fonctionnement .operation .operation__steps--icon {
     margin-left: 20px;
   }
 
+/* RESTAURANTS  */
+
 
   #restaurants {
     width: 100%;
-    background-color: #FFF;
+    background-color: #F6F6F6;
     display: flex;
     flex-flow: row wrap;
   }
