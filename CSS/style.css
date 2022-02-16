@@ -645,9 +645,16 @@ footer p {
 @media (min-width: 992px) {
     /* Général */
     /* Accueil */
+
     main .fonctionnement .operation {
         display: flex;
     }
+
+    main .fonctionnement .operation li {
+margin: 10px 40px 40px 10px;
+padding-right: 20px;
+    }
+
     header .logo {
         width: 20%;
         margin: 0 40%;
