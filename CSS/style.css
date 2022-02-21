@@ -81,14 +81,11 @@ body {
     font-size: 0.8em;
 }
 
-h1 {
-    font-family: Shrikhand;
-    padding-left: 12px;
-}
-
 h2 {
-    font-family: Shrikhand;
-    padding-left: 12px;
+    font-family: Roboto;
+    padding-left: 40px;
+    font-weight: bold;
+    font-size: 26px;
 }
 
 .card .fa-heart {
@@ -176,7 +173,7 @@ header {
     text-align: center;
 }
 
-header #logo h1 a {
+header #logo a {
     font-family: 'Shrikhand', cursive;
     font-size: 34px;
     color: black;
@@ -238,12 +235,6 @@ header .accueil .explorer {
 
 /* MAIN */
 
-main h1 {
-    padding-left: 15px;
-    font-size: 25px;
-}
-
-
 /* FONCTIONNEMENT */
 
 main .fonctionnement .operation li {
@@ -296,7 +287,7 @@ main .fonctionnement .operation .operation__steps--icon {
     flex-direction: column;
 }
 
-#restaurants h1 {
+#restaurants h2 {
     margin-right: 98%;
 }
 
@@ -606,10 +597,9 @@ footer {
     padding-left: 20px;
     font-weight: bold;
     line-height: 6px;
-    ;
 }
 
-footer h2 {
+footer h3 {
     font-family: 'Shrikhand', cursive;
     font-size: 17px;
     text-decoration: none;
@@ -644,15 +634,15 @@ footer p {
 
 @media (min-width: 992px) {
     /* Général */
-    /* Accueil */
+
 
     main .fonctionnement .operation {
         display: flex;
     }
 
     main .fonctionnement .operation li {
-margin: 10px 40px 40px 10px;
-padding-right: 20px;
+    margin: 10px 40px 40px 10px;
+    padding-right: 20px;
     }
 
     header .logo {
@@ -696,7 +686,7 @@ padding-right: 20px;
         -ms-flex-flow: row wrap;
         flex-flow: row wrap;
     }
-    #restaurants h1 {
+    #restaurants h2 {
         margin-right: 98%;
     }
     #restaurants .card {
