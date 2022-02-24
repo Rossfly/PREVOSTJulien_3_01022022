@@ -1,6 +1,5 @@
 /* LOADER */
 
-
 .loader {
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
@@ -49,6 +48,49 @@
     }
 }
 
+/* RETOUR L'ACCUEIL */
+
+.fa-arrow-left {
+    font-size: 30px;
+    float: left;
+    margin-left: 20px;
+    color:#000;
+  }
+
+/* COEUR */
+
+.coeur {
+padding-right: 10px;
+color:#000;
+  }
+
+.far.fa-heart {
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .fa-heart {
+    font-size: 30px;
+  }
+
+  .fas.fa-heart {
+    transition-duration: 2500ms;
+    transform: scale(0);
+    transform-origin: bottom;
+  }
+
+  .coeur:hover .fas {
+    transform: scale(1);
+    background-image: linear-gradient(to bottom, #9356dc, #ff79da);
+    color: transparent;
+    -webkit-background-clip: text;
+  }
+
+  .coeur:hover .far.fa-heart {
+    transform: scale(0);
+    transition-delay: 2500ms;
+  }
+  
 
 /* BODY */
 
@@ -84,108 +126,57 @@ body {
 
 h2 {
     font-family: Roboto;
-    padding-left: 40px;
+    padding-left: 10px;
     font-weight: bold;
     font-size: 26px;
 }
 
-.card .fa-heart {
-    position: absolute;
-    background-color: transparent;
-    color: grey;
-}
-
-.card .fa-heart.far:hover+i {
-    color: #9356DC;
-    -webkit-animation: heart 2000ms ease-out;
-    animation: heart 2000ms ease-out;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-.card .fa-heart.fas {
-    color: #9356DC;
-    font-size: 0;
-}
-
-@-webkit-keyframes heart {
-    0% {
-        font-size: 0;
-    }
-    100% {
-        font-size: 1.3em;
-    }
-}
-
-@keyframes heart {
-    0% {
-        font-size: 0;
-    }
-    100% {
-        font-size: 1.3em;
-    }
-}
-
-.menu .fa-heart {
-    position: absolute;
-    background-color: transparent;
-    color: grey;
-}
-
-.menu .fa-heart.far:hover+i {
-    color: #9356DC;
-    -webkit-animation: heart2 2000ms ease-out;
-    animation: heart2 2000ms ease-out;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-.menu .fa-heart.fas {
-    color: #9356DC;
-    font-size: 0;
-}
-
-@-webkit-keyframes heart2 {
-    0% {
-        font-size: 0;
-    }
-    100% {
-        font-size: 1.8em;
-    }
-}
-
-@keyframes heart2 {
-    0% {
-        font-size: 0;
-    }
-    100% {
-        font-size: 1.8em;
-    }
+.underline-regular {
+margin-left:10px;
 }
 
 /* EFFET TRANSITION  */
 
-.repas{
+.menu_content{
     width: 100%;
     display: flex;
     flex-direction: column;
     animation-name: transition;
-    animation-duration: 3s;
+    /* animation-duration: 3s; */
+  }
+.menu_content:nth-child(0n){
+    animation-delay: 1s;
+  }
+.menu_content:nth-child(0n+1){
+    animation-delay: 1.2s;
+  }
+.menu_content:nth-child(0n+2){
+    animation-delay: 1.4s;
+  }
+.menu_content:nth-child(0n+3){
+    animation-delay: 1.6s;
+  }
+.menu_content:nth-child(0n+4){
+    animation-delay: 1.8s;
+  }
+.menu_content:nth-child(0n+5){
+    animation-delay: 2s;
   }
   
   @keyframes transition {
     0% {
       visibility: hidden;
-      margin-top: -20%;
+      transform: translateY(20px);
       opacity: 0;
-  
+
     }
+  
     100% {
       visibility: visible;
+      transform: translateY(0px);
       opacity: 1;
     }
   }
-
 
 
 /* HEADER */
@@ -196,6 +187,7 @@ a {
 
 header {
     text-align: center;
+
 }
 
 header #logo a {
@@ -378,20 +370,6 @@ main .fonctionnement .operation .operation__steps--icon {
     padding-left: 10px;
 }
 
-.content_heart {
-    position: relative;
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content_heart .fa-heart {
-    position: absolute;
-    align-items: center;
-    font-size: 1.3em;
-}
-
 .picture {
     background-size: cover;
     background-position: center;
@@ -428,11 +406,7 @@ main .fonctionnement .operation .operation__steps--icon {
     position: relative;
 }
 
-.menu .fa-heart {
-    font-size: 1.8em;
-}
-
-.menu__content {
+.menu_content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -450,7 +424,7 @@ main .fonctionnement .operation .operation__steps--icon {
     box-shadow: 0 5px 5px lightgrey;
 }
 
-.menu__content a {
+.menu_content a {
     position: absolute;
     left: 90%;
     text-align: right;
@@ -458,7 +432,7 @@ main .fonctionnement .operation .operation__steps--icon {
     padding-top: 45px;
 }
 
-.menu__content p {
+.menu_content p {
     font-family: Roboto;
     margin: 0px;
     color: #000;
@@ -476,7 +450,7 @@ font-weight: bold;
 }
 
 
-.menu__content p:nth-child(2n) {
+.menu_content p:nth-child(2n) {
     padding-left: 8px;
     padding-top: 8px;
 }
@@ -534,7 +508,7 @@ font-weight: bold;
     }
 }
 
-.menu__content {
+.menu_content {
     -webkit-animation: menu_keyframes 3000ms backwards;
     animation: menu_keyframes 3000ms backwards;
 }
@@ -590,32 +564,32 @@ font-weight: bold;
     transition: 700ms cubic-bezier(0.32, 0, 0.07, 1);
 }
 
-.menu__content a {
+.menu_content a {
     -webkit-transition: 500ms cubic-bezier(0.32, 0, 0.07, 1);
     transition: 500ms cubic-bezier(0.32, 0, 0.07, 1);
 }
 
-.menu__content:hover {
+.menu_content:hover {
     cursor: pointer;
 }
 
-.menu__content:hover .lock {
+.menu_content:hover .lock {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-.menu__content:hover .lock .fa-check {
+.menu_content:hover .lock .fa-check {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
 
-.menu__content:hover .accompagnement,
-.menu__content:hover .plat {
+.menu_content:hover .accompagnement,
+.menu_content:hover .plat {
     width: 200px;
     text-overflow: ellipsis;
 }
 
-.menu__content:hover a {
+.menu_content:hover a {
     position: absolute;
     left: 65%;
     padding-right: 16px;
@@ -659,6 +633,8 @@ footer p {
 
 /* MEDIA */
 
+
+
 @media (min-width: 768px) {
     /* Accueil */
     .list__content {
@@ -671,9 +647,10 @@ footer p {
     }
 }
 
+
+
 @media (min-width: 992px) {
     /* Général */
-
 
     main .fonctionnement .operation {
         display: flex;
@@ -753,6 +730,7 @@ footer p {
         width: 30%;
         margin: 0 30px;
     }
+
     .menu .space-between {
         width: 100%;
         margin-right: 32px;
@@ -760,8 +738,4 @@ footer p {
     .menu .menu-content {
         margin: 16px 0;
     }
-}
-
-.menu .menu-content {
-    margin: 16px 0;
 }
