@@ -1,7 +1,7 @@
 /* LOADER */
 
 .loader {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: background-color: transparent;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -133,6 +133,12 @@ h2 {
 
 .underline-regular {
 margin-left:10px;
+font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    border-bottom: 4px solid #99e2d0;
+    padding-top: 16px;
+    width: 10%;
+    padding: 4px 0;
 }
 
 /* EFFET TRANSITION  */
@@ -142,7 +148,6 @@ margin-left:10px;
     display: flex;
     flex-direction: column;
     animation-name: transition;
-    /* animation-duration: 3s; */
   }
 .menu_content:nth-child(0n){
     animation-delay: 1s;
@@ -168,7 +173,6 @@ margin-left:10px;
       visibility: hidden;
       transform: translateY(20px);
       opacity: 0;
-
     }
   
     100% {
@@ -390,6 +394,11 @@ main .fonctionnement .operation .operation__steps--icon {
     -ms-flex-align: center;
     align-items: center;
 }
+.space-between h2{
+    font-family: 'Shrikhand', cursive;
+    font-weight: lighter;
+
+}
 
 .underline {
     border-bottom: 4px solid #99E2D0;
@@ -430,25 +439,37 @@ main .fonctionnement .operation .operation__steps--icon {
     text-align: right;
     padding-right: 16px;
     padding-top: 45px;
+    
 }
 
 .menu_content p {
     font-family: Roboto;
     margin: 0px;
     color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .medium-plat {
 font-weight: bold;
 padding-left: 8px;
-padding-top: 5px;
+padding-top: 10px;
 }
 
+.medium-plat:visited{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 10px;
+}
 
 .prix {
-font-weight: bold;
+    font-weight: bold;
+    padding-bottom: 20px;
+    color:#278870;
 }
-
+    
 
 .menu_content p:nth-child(2n) {
     padding-left: 8px;
@@ -552,6 +573,7 @@ font-weight: bold;
     transition: -webkit-transform 700ms cubic-bezier(0.32, 0, 0.07, 1);
     transition: transform 700ms cubic-bezier(0.32, 0, 0.07, 1);
     transition: transform 700ms cubic-bezier(0.32, 0, 0.07, 1), -webkit-transform 700ms cubic-bezier(0.32, 0, 0.07, 1);
+    
 }
 
 .accompagnement,
@@ -562,6 +584,7 @@ font-weight: bold;
     position: relative;
     -webkit-transition: 700ms cubic-bezier(0.32, 0, 0.07, 1);
     transition: 700ms cubic-bezier(0.32, 0, 0.07, 1);
+    
 }
 
 .menu_content a {
@@ -595,9 +618,6 @@ font-weight: bold;
     padding-right: 16px;
     padding-top: 45px;
 }
-
-
-
 
 
 /* FOOTER */
